@@ -1,0 +1,94 @@
+.main
+	font-family: 'Outfit', sans-serif
+	height: 100vh
+	min-height: 530px
+	background: $main_bg
+	display: flex
+	justify-content: center
+	align-items: center
+
+.nft-card
+	background: $card_bg
+	border-radius: 10px
+	overflow: hidden
+	padding: 1.2em
+	margin: 1.2em
+	box-shadow: 0 15px 5px 10px rgba(0, 0, 0, .1)
+	max-width: 270px
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+
+	&__illustration
+		grid-column: span 2
+		max-height: 250px
+		border-radius: 5px
+		overflow: hidden
+		position: relative
+		&-img
+			width: 100%
+			height: 100%
+		&-view
+			position: absolute
+			top: 0
+			z-index: 10
+			height: 100%
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			opacity: 0
+			cursor: pointer
+			transition: .3s
+			&:hover
+				background: hsla(178, 100%, 50%, .5)
+				opacity: 1
+	&__title
+		grid-column: span 2
+		color: $white
+	&__text
+		margin-top: 0
+		grid-column: span 2
+		color: $soft-blue
+		font-size: 18px
+	&__info
+		grid-column:  span 2
+		display: flex
+		justify-content: space-between
+		&-item
+			margin: 0
+			display: inline-flex
+			align-items: center
+		&-text
+			margin-left: 7px
+			&--eth
+				color: $cyan
+			&--clock
+				color: $soft-blue
+	&__footer
+		grid-column: span 2
+		border-top: 1px solid $line
+		margin-top: 25px
+		padding: 15px 0 5px 0
+	&__author
+		display: flex
+		align-items: center
+		margin: 0
+		&-avatar
+			height: 25px
+			border: 1px solid $white
+			border-radius: 100%
+		&-text
+			color: $soft-blue
+			margin-left: 15px
+			&-name
+				color: $white
+
+.attribution
+	position: fixed
+	bottom: 0
+	color: $white
+	&__text
+		font-size: 12px
+		margin: 0
+		a 
+			color: $cyan

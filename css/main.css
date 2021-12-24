@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+.main {
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  min-height: 530px;
+  background: #0d192b;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.nft-card {
+  background: #14253d;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1.2em;
+  margin: 1.2em;
+  box-shadow: 0 15px 5px 10px rgba(0, 0, 0, 0.1);
+  max-width: 270px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .nft-card__illustration {
+    grid-column: span 2;
+    max-height: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative; }
+    .nft-card__illustration-img {
+      width: 100%;
+      height: 100%; }
+    .nft-card__illustration-view {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      cursor: pointer;
+      transition: 0.3s; }
+      .nft-card__illustration-view:hover {
+        background: rgba(0, 255, 247, 0.5);
+        opacity: 1; }
+  .nft-card__title {
+    grid-column: span 2;
+    color: white; }
+  .nft-card__text {
+    margin-top: 0;
+    grid-column: span 2;
+    color: #8bacda;
+    font-size: 18px; }
+  .nft-card__info {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between; }
+    .nft-card__info-item {
+      margin: 0;
+      display: inline-flex;
+      align-items: center; }
+    .nft-card__info-text {
+      margin-left: 7px; }
+      .nft-card__info-text--eth {
+        color: #00fff7; }
+      .nft-card__info-text--clock {
+        color: #8bacda; }
+  .nft-card__footer {
+    grid-column: span 2;
+    border-top: 1px solid #2f415b;
+    margin-top: 25px;
+    padding: 15px 0 5px 0; }
+  .nft-card__author {
+    display: flex;
+    align-items: center;
+    margin: 0; }
+    .nft-card__author-avatar {
+      height: 25px;
+      border: 1px solid white;
+      border-radius: 100%; }
+    .nft-card__author-text {
+      color: #8bacda;
+      margin-left: 15px; }
+      .nft-card__author-text-name {
+        color: white; }
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  color: white; }
+  .attribution__text {
+    font-size: 12px;
+    margin: 0; }
+    .attribution__text a {
+      color: #00fff7; }
+
+/*# sourceMappingURL=main.css.map */
